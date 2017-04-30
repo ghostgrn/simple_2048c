@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -std=c11 -pedantic -g
+CFLAGS = -std=c11 -pedantic -g
 SRC = grid.c game.c
 HDR = grid.h
 OBJ = $(SRC:.c=.o)
