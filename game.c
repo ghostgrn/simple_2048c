@@ -99,7 +99,7 @@ int main(int argc, const char * argv[])
     }
     if(checkLoss(g))
     {
-      printf("OH NO! You loss the game!\n");
+      printf("OH NO! You lost the game!\n");
       printf("#####################################\n");
       break;
     }
