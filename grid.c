@@ -450,12 +450,12 @@ void moveDown(Grid * g)
     }
     //zeros are moved up. Then look for same number that is adjacent
     //finding matches
-    for(int j=1;j<=g->y - 1;j++)
+    for(int j=g->y;j>=2;j--)
     {
-      if(getTile(g,i,j) == getTile(g,i,j+1))   //combine
+      if(getTile(g,i,j) == getTile(g,i,j-1))   //combine down to up
       {
-        setTile(g,i,j,getTile(g,i,j)+getTile(g,i,j+1));
-        setTile(g,i,j+1,0);
+        setTile(g,i,j,getTile(g,i,j)+getTile(g,i,j-1));
+        setTile(g,i,j-1,0);
       }
     }
     //all same numbers are combined
@@ -540,12 +540,12 @@ void moveRight(Grid * g)
     }
     //zeros are moved up. Then look for same number that is adjacent
     //finding matches
-    for(int i=1;i<=g->x - 1;i++)
+    for(int i=g->x;i>=2;i--)
     {
-      if(getTile(g,i,j) == getTile(g,i+1,j))   //combine
+      if(getTile(g,i,j) == getTile(g,i-1,j))   //combine
       {
-        setTile(g,i,j,getTile(g,i,j)+getTile(g,i+1,j));
-        setTile(g,i+1,j,0);
+        setTile(g,i,j,getTile(g,i,j)+getTile(g,i-1,j));
+        setTile(g,i-1,j,0);
       }
     }
     //all same numbers are combined
